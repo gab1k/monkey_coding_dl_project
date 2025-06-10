@@ -1,2 +1,2 @@
-# monkey_coding_dl_project
-HSE DL spring 2025 project Литвинов Михаил и Габидуллин Камиль
+# HSE DL project spring-2025
+### Литвинов Михаил и Габидуллин Камиль
