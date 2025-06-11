@@ -18,7 +18,7 @@ from nltk.tokenize import word_tokenize
 from sklearn.model_selection import train_test_split
 from torch import nn
 
-import datasets_params
+from . import datasets_params
 
 
 @dataclass
@@ -245,16 +245,7 @@ class DatasetGenerator:
         y_val = torch.tensor(val_df[self.dataset_params.label_col_name].values, dtype=torch.long)
         y_test = torch.tensor(test_df[self.dataset_params.label_col_name].values, dtype=torch.long)
         
-        # Create embedding layer
-        self.embedding_layer = self.generate_embeddings(len(self.vocab))
-        
-        # Apply embeddings to features
-        with torch.no_grad():
-            X_train = self.embedding_layer(X_train.to(self.device)).to(torch.float32)
-            X_val = self.embedding_layer(X_val.to(self.device)).to(torch.float32)
-            X_test = self.embedding_layer(X_test.to(self.device)).to(torch.float32)
-        
-        return (X_train, y_train), (X_val, y_val), (X_test, y_test), self.embedding_layer
+        return (X_train, y_train), (X_val, y_val), (X_test, y_test)
 
 
     def get_vocabulary(self) -> Tuple[Dict[str, int], Dict[int, str]]:
