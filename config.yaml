@@ -1,0 +1,7 @@
+model_path: "./pretrained/best_model.pth"
+vocab_path: "./pretrained/vocab.json"
+config_path: "./pretrained/config.json"
+server:
+  local: true
+  host: "0.0.0.0"
+  port: 7860
