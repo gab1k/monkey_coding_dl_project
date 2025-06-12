@@ -98,4 +98,6 @@ class App:
                 server_port=self.config.port
             )
         else:
-            interface.launch()
+            interface.launch(
+                share=True
+            )
