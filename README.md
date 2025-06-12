@@ -1,10 +1,18 @@
 # HSE DL project spring-2025
 ## Литвинов Михаил и Габидуллин Камиль
+
+### Запуск:
+- `sudo apt install python3-poetry`
+- `git clone https://github.com/gab1k/monkey_coding_dl_project.git`
+- `cd monkey_coding_dl_project`
+- `poetry shell`
+- `poetry install`
+
 ### Лейаут директорий:
-- В директории `./app` ...
-- В директории `./data` есть три файла 
+- `./main.py` - точка входа в приложение на `Gradio`
+- В директории `./src/app` ...
+- В директории `./src/data` есть три файла 
   - `datasets_params.py` - содержит настройки использующихся датасетов [stanfordnlp/imdb](https://huggingface.co/datasets/stanfordnlp/imdb) и [fancyzhx/amazon_polarity](https://huggingface.co/datasets/fancyzhx/amazon_polarity)
-  - `preprocessor.py` - содержит генератор датасетов - это класс, позволяющий делать всю обработку датасетов одним методом
-  - `datasets_stats.ipynb` - содержит примеры работ генератора и визуализацию выбранных датасетов
-- В директории `./main` ...
-- В директории `./models` ...
+  - `preprocessor.py` - содержит генератор датасетов - это класс, позволяющий делать всю обработку датасета одним методом
+  - `datasets_stats.ipynb` - содержит примеры работ генератора и визуализацию статстик выбранных датасетов
+- В директории `./src/models` ...
