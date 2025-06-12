@@ -2,10 +2,10 @@
 ## Литвинов Михаил и Габидуллин Камиль
 
 ### Запуск:
-- `sudo apt install python3-poetry`
 - `git clone https://github.com/gab1k/monkey_coding_dl_project.git`
 - `cd monkey_coding_dl_project`
-- `poetry shell`
+- `pipx install poetry`
+  - Надо установить `pipx` если ещё нет `sudo apt install pipx; pipx ensurepath`
 - `poetry install`
 
 ### Лейаут директорий:
