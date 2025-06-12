@@ -1,6 +1,7 @@
 model_path: "./pretrained/best_model.pth"
 vocab_path: "./pretrained/vocab.json"
 config_path: "./pretrained/config.json"
+max_seq_len: 300
 server:
   local: true
   host: "0.0.0.0"

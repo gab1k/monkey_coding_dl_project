@@ -13,10 +13,6 @@ from src.data_utils.config import DatasetConfig, TextProcessorConfig
 from src.data_utils.text_processor import TextProcessor
 
 
-import warnings
-for warn in [UserWarning, FutureWarning]: warnings.filterwarnings("ignore", category = warn)
-
-
 class DatasetGenerator:
     """
     Main dataset generator class
