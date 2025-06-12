@@ -4,9 +4,11 @@
 ### Запуск:
 - `git clone https://github.com/gab1k/monkey_coding_dl_project.git`
 - `cd monkey_coding_dl_project`
-- `pipx install poetry`
-  - Надо установить `pipx` если ещё нет `sudo apt install pipx; pipx ensurepath`
-- `poetry install`
+- Установка `poetry`, если нет - `pipx install poetry`
+  - Надо установить `pipx`, если нет - `sudo apt install pipx; pipx ensurepath`
+- Создание окружения и скачивание зависимостей - `poetry install`
+- Запуск приложения на `Gradio` - `poetry run python main.py`
+- Запуск ноутбуков - `poetry run jupyter notebook` и выбираем нужный
 
 ### Лейаут директорий:
 - `./main.py` - точка входа в приложение на `Gradio`
