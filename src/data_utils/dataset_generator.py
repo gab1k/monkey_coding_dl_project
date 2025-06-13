@@ -4,7 +4,7 @@ from typing import Dict, Tuple, List
 import pandas as pd
 import torch
 
-from datasets import load_dataset
+from datasets import load_dataset, load_from_disk
 from sklearn.model_selection import train_test_split
 
 import src.data_utils.dataset_params as dataset_params
@@ -57,8 +57,10 @@ class DatasetGenerator:
         Returns:
             Tuple of (train_df, val_df, test_df) DataFrames
         """
-
-        dataset = load_dataset(self.dataset_params.hugging_face_name)
+        if self.config.load_from_disk:
+            dataset = load_from_disk(f"{self.config.path_to_data}/{self.dataset_params.local_path}")
+        else:
+            dataset = load_dataset(self.dataset_params.hugging_face_name)
         train_df = pd.DataFrame(dataset["train"])
         test_df = pd.DataFrame(dataset["test"])
         val_df, test_df = train_test_split(

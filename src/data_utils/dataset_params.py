@@ -18,6 +18,8 @@ class DatasetParams:
     hugging_face_name = ""
     content_col_name = ""
     label_col_name = ""
+    local_path = ""
+
 
 
 def get_dataset_params_by_name(dataset_name: DatasetName) -> DatasetParams:
@@ -37,6 +39,7 @@ class ImbdParams(DatasetParams):
     hugging_face_name = "stanfordnlp/imdb"
     content_col_name = "text"
     label_col_name = "label"
+    local_path = "imdb"
 
 
 class PolarityParams(DatasetParams):
@@ -47,3 +50,4 @@ class PolarityParams(DatasetParams):
     hugging_face_name = "fancyzhx/amazon_polarity"
     content_col_name = "content"
     label_col_name = "label"
+    local_path = "polarity"
