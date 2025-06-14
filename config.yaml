@@ -3,6 +3,6 @@ vocab_path: "./pretrained/vocab.json"
 config_path: "./pretrained/config.json"
 max_seq_len: 300
 server:
-  local: true
+  share: false
   host: "0.0.0.0"
   port: 7861

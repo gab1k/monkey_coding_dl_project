@@ -92,13 +92,8 @@ class App:
                     "Thw worst thing in the world!"]
         )
         
-        if self.config.local:
-            interface.launch(
-                share=False,
-                server_name=self.config.host,
-                server_port=self.config.port
-            )
-        else:
-            interface.launch(
-                share=True
-            )
+        interface.launch(
+            share=self.config.share,
+            server_name=self.config.host,
+            server_port=self.config.port
+        )

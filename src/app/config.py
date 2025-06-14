@@ -9,7 +9,7 @@ class AppConfig:
     vocab_path: str
     config_path: str
     max_seq_len: int = 300
-    local: bool = True
+    share: bool = True
     host: str = "0.0.0.0"
     port: int = 7861
 
@@ -33,7 +33,7 @@ class AppConfig:
             vocab_path=config_data['vocab_path'],
             config_path=config_data['config_path'],
             max_seq_len=int(config_data['max_seq_len']),
-            local=config_data.get('server', {}).get('local', True),
+            share=config_data.get('server', {}).get('share', True),
             host=config_data.get('server', {}).get('host', "0.0.0.0"),
             port=config_data.get('server', {}).get('port', 7861)
         )
