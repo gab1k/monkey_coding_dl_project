@@ -1,6 +1,9 @@
 # HSE DL project spring-2025
 ## Литвинов Михаил и Габидуллин Камиль
 
+### Попробовать лучшую модель можно по ссылке:
+- `https://huggingface.co/spaces/litvinovmitch11/monkey_coding_dl_project`
+
 ### Предварительные шаги:
 - `git clone https://github.com/gab1k/monkey_coding_dl_project.git`
 - `cd monkey_coding_dl_project`
