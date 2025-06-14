@@ -2,7 +2,7 @@
 ## Литвинов Михаил и Габидуллин Камиль
 
 ### Попробовать лучшую модель можно по ссылке:
-- `https://huggingface.co/spaces/litvinovmitch11/monkey_coding_dl_project`
+- [https://huggingface.co/spaces/litvinovmitch11/monkey_coding_dl_project](https://huggingface.co/spaces/litvinovmitch11/monkey_coding_dl_project)
 
 ### Предварительные шаги:
 - `git clone https://github.com/gab1k/monkey_coding_dl_project.git`
@@ -11,7 +11,7 @@
   - Надо установить `pipx`, если нет - `sudo apt install pipx; pipx ensurepath`
 - Создание окружения и скачивание зависимостей - `poetry install`
 
-### Настройка кофига приложения (закоммичен дефолтный вариант для локального запуска):
+### Настройка кофига приложения (закоммичен дефолтный вариант для локального запуска и запуска на сервере Hugging Face):
 - `model_path` - путь к модели 
 - `vocab_path` - путь к словарю
 - `config_path` - путь к конфигу модели

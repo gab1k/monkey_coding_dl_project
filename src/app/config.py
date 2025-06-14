@@ -11,7 +11,7 @@ class AppConfig:
     max_seq_len: int = 300
     share: bool = True
     host: str = "0.0.0.0"
-    port: int = 7861
+    port: int = 7860
 
     @classmethod
     def from_yaml(cls, config_path: str) -> 'AppConfig':
@@ -35,5 +35,5 @@ class AppConfig:
             max_seq_len=int(config_data['max_seq_len']),
             share=config_data.get('server', {}).get('share', True),
             host=config_data.get('server', {}).get('host', "0.0.0.0"),
-            port=config_data.get('server', {}).get('port', 7861)
+            port=config_data.get('server', {}).get('port', 7860)
         )
