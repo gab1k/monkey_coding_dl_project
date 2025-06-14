@@ -94,6 +94,7 @@ class App:
         
         if self.config.local:
             interface.launch(
+                share=False,
                 server_name=self.config.host,
                 server_port=self.config.port
             )
