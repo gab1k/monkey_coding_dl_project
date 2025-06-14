@@ -28,6 +28,7 @@ class TextProcessor:
             word_tokenize("test")
         except LookupError:
             nltk.download("punkt")
+            nltk.download('punkt_tab')
 
 
     def preprocess_text(self, text: str) -> List[str]:
