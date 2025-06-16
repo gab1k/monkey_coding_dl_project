@@ -15,6 +15,7 @@ class DatasetConfig:
         min_word_freq: Minimum word frequency to include in vocabulary
         load_from_disk: Load dataset from local dir. If false download from huggin face
         path_to_data: Path to local dataset data
+        build_vocab: Is build vocabulary necessary
         max_seq_len: Maximum sequence length (will be padded/truncated to this)
         lowercase: Whether to convert text to lowercase
         remove_punct: Whether to remove punctuation
@@ -30,6 +31,7 @@ class DatasetConfig:
     min_word_freq: int = 1
     load_from_disk: bool = False
     path_to_data: str = "./datasets"
+    build_vocab: bool = True
 
     max_seq_len: int = 300
     lowercase: bool = True

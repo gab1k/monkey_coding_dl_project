@@ -128,7 +128,8 @@ class DatasetGenerator:
         train_texts = train_df[self.dataset_params.content_col_name].tolist()
         train_tokens = [self.text_processor.preprocess_text(text) for text in train_texts]
         
-        self.vocab, self.id2word = self.build_vocabulary(train_tokens)
+        if self.config.build_vocab:
+            self.vocab, self.id2word = self.build_vocabulary(train_tokens)
 
         X_train = torch.stack([self.text_processor.text_to_tensor(text) for text in train_texts])
         
